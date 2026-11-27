@@ -6,7 +6,7 @@
   "license": "MIT",
   "type": "commonjs",
   "devDependencies": {
-    "@forge/cli": "^14.2.0",
+    "@forge/cli": "^16.0.0",
     "@forge/manifest": "^13.7.0",
     "@types/node": "^26.6.11",
     "@types/react": "^19.3.3",
