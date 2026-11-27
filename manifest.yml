@@ -1,5 +1,5 @@
 app:
-  id: ari:cloud:ecosystem::app/3f0c5f3e-9a1c-4c2f-9d67-5b1a2c7e8d41
+  id: ari:cloud:ecosystem::app/d4b8eba7-1a10-41ca-854a-81e813416e32
   runtime:
     name: nodejs22.x
     memoryMB: 256
@@ -15,7 +15,8 @@ modules:
         function: resolver
       title: Baton handoff brief
       icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
-      tooltip: What the next owner needs to know, assembled from this issue, its docs and its history.
+      tooltip: What the next owner needs to know, assembled from this issue, its docs
+        and its history.
 
   jira:issueAction:
     - key: baton-issue-action
@@ -35,7 +36,9 @@ modules:
   rovo:agent:
     - key: baton-agent
       name: Baton handoff agent
-      description: Answers "what do I need to know before I take this on?" for a Jira issue, using recorded decisions, past incidents and the people who hold the detail.
+      description: Answers "what do I need to know before I take this on?" for a Jira
+        issue, using recorded decisions, past incidents and the people who hold
+        the detail.
       prompt: resource:agent-resource;prompts/agent-prompt.md
       conversationStarters:
         - What do I need to know before I take over PAY-412?
