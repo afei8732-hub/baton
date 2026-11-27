@@ -1,0 +1,5 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": { "target": "es2022", "module": "es2022", "moduleResolution": "node", "lib": ["es2022"], "downlevelIteration": true, "skipLibCheck": true },
+  "include": ["src/resolvers/**/*", "src/shared/**/*"]
+}
