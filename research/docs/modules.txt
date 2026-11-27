@@ -1,0 +1,106 @@
+Developer
+Documentation
+Resources
+News and Updates
+Get Support
+Sign in
+Developer
+Get Support
+Sign in
+DOCUMENTATION
+Cloud
+Data Center
+Resources
+News and Updates
+Get support
+Sign in
+Developer
+Sign in
+DOCUMENTATION
+Cloud
+Data Center
+Resources
+News and Updates
+Get support
+Sign in
+Forge
+Guides
+Reference
+CLI
+Manifest
+Modules
+Functions
+Containers (Preview)
+Storage
+User Interface
+Events
+REST API
+Get help
+Changelog
+Forge
+Guides
+Reference
+Get help
+Changelog
+Overview
+Forge modules
+Automation modules
+Bitbucket modules
+Compass modules
+Confluence modules
+Dashboard modules
+Global modules
+Jira modules
+Jira Service Management modules
+Customer Service Management modules
+Jira Software modules
+Rovo modules
+Teamwork Graph modules
+Connect module equivalents
+Last updated Jul 1, 2026
+Modules overview
+A module in Atlassian Forge is a component defined in your app's
+manifest.yml
+file. It specifies how your app integrates with Atlassian apps by defining properties and behaviors that correspond to specific extension points within these apps. Modules enable you to:
+Extend functionality: Add custom features and integrations to Atlassian Cloud apps.
+Interact with APIs: Utilize Atlassian's APIs to enhance app capabilities.
+Customize user interfaces: Modify and extend the UI to fit your app's needs.
+Depending on which Atlassian app you're building for, a number of different modules are available.
+Forge
+Explore modules that you can use with Jira, Confluence, Bitbucket, and Compass to define functions, respond to app events, handle incoming third party webhook requests, and schedule periodic function execution.
+Automation
+Enable your app to integrate with Atlassian Automation to extend workflows and streamline processes.
+Bitbucket
+Extend Bitbucket with custom functionalities like enhanced repository management, automation of pull request workflows, and integration with external tools.
+Compass
+Enhance Compass by providing additional insights into component health, managing dependencies, and integrating with other developer tools.
+Confluence
+Add custom content, macros, and integrations to Confluence to improve documentation, collaboration, and information sharing capabilities.
+Jira
+Customize and extend Jira with additional fields, workflows, and interface elements to better support project management and issue tracking.
+Jira Service Management
+Add new features to Jira Service Management to improve how support teams handle customer requests, automate tasks, and connect with other tools for better service delivery.
+Customer Service Management
+Add new features to Customer Service Management to extend user and customer experiences across queues, request details, and the support site.
+Rovo
+Explore Forge Rovo modules to enhance your apps with advanced AI functionality.
+Teamwork Graph
+Connect your app to Atlassian’s Teamwork Graph to ingest, sync, and surface data from external sources.
+Global module (EAP)
+Give your app its own end-to-end, full-page experience across the Atlassian platform, accessed directly from the Atlassian app switcher.
+Rate this page:
+Unusable
+Poor
+Okay
+Good
+Excellent
+Changelog
+System status
+Privacy
+Notice at Collection
+Developer Terms
+Trademark
+Cookie preferences
+©
+2026
+Atlassian

@@ -2,9 +2,9 @@
 
 Read from the official pages before writing any code. The page most people land on,
 `codegeist.devpost.com`, is the **2024** edition — the live 2026 page is
-<https://codegeist2026.devpost.com/>. Snapshots of what was read are in
-`.research/` (`ov2026.html`, `rules2026.html` plus text extracts, and the Forge
-docs for `rovo:agent`, `rovo:action`, `rovo:mcp`, `modules`).
+<https://codegeist2026.devpost.com/>. What was read is kept in `research/` as text
+extracts: the 2026 overview and rules (`ov2026.html.txt`, `rules2026.html.txt`)
+and the Forge docs for `rovo:agent`, `rovo:action`, `rovo:mcp` and `modules`.
 
 ## Edition check
 
