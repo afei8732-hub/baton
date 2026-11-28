@@ -1,161 +1,96 @@
-# Video script — Baton
+# Demo video — Baton (final cut 2:07)
 
-Target **3:30** (hard limit is 5:00, so this leaves room for breathing).
-Record at 1440×900 or 1920×1080, browser zoom 100%, no personal data on screen.
-Two fixtures are used throughout and both are in the repo, so the demo is
-reproducible: **PAY-412** (well documented, but a superseded decision) and
-**PAY-457** (nothing recorded).
+**Format:** a real screen recording of Jira Cloud in Chromium at 1600×900, driven
+through the actual Baton Forge app. English voice-over (edge-tts
+`en-US-GuyNeural`), burned-in English captions, no music, no third-party marks.
+The recording is 127 s, under the 5-minute limit.
 
-Narration ≈ 480 words ≈ 3:25 at a calm pace.
+**Recorded on:** <https://loubaton.atlassian.net>, project `PAY`.
+Two issues carry the demo:
+
+- **PAY-1** — retry policy for gateway timeouts. Six comments, two linked work
+  items, and three Confluence pages (ADR-14, the September postmortem, the API
+  contract). Confidence **75 / strong**, 8 signals, 3 sources.
+- **PAY-5** — saved-card wallet for checkout. One comment, no decision.
+  Confidence **8 / thin**, no signals, one high gap.
+
+The fixture keys in `src/shared/fixtures.ts` (`PAY-412`, `PAY-457`) are the
+offline preview/test data; the recording uses the live site's own keys.
 
 ---
 
-## 0:00 – 0:15 · Cold open
+## 0:00 – 0:18 · Cold open
 
-**On screen:** Jira issue PAY-412 open, sidebar empty. Slowly scroll the comment
-thread — 20+ comments, one from February, one from September.
-
+**On screen:** PAY-1 activity, scrolling the comment thread.
 **Narration:**
+> Work changes hands all the time. Someone goes on leave. An issue is reopened
+> after three months. A new engineer picks up a stale ticket. The ticket says
+> what to build. It rarely says what was already decided.
 
-> This is a handoff. Somebody is about to take over a payment retry issue with
-> twenty comments, a postmortem, and an architecture decision recorded six months
-> ago. The ticket says what to build. It does not say what was already decided, or
-> what changed since.
+## 0:19 – 0:40 · The panel
 
----
-
-## 0:15 – 0:35 · What Baton is
-
-**On screen:** open the Baton issue panel. The brief appears: headline, confidence
-ring at **68 / WORKABLE**, three stats (10 signals · 3 sources · 4 people),
-fingerprint `ac601892`.
-
+**On screen:** cut to the Baton panel on PAY-1: header, headline decision,
+confidence ring 75, `8 signals · 3 sources · 1 person`.
 **Narration:**
+> This is PAY-1: a payment retry issue with six comments, two linked incidents,
+> and three Confluence pages. Baton is a Forge app that turns that history into a
+> handoff brief, right inside Jira. No model. No external service. Just the
+> context that already exists.
 
-> Baton is a Forge app that assembles a handoff brief from the context that
-> already exists — the issue, its comments, its changelog, its links, and the
-> Confluence pages that mention it. No model, no external service. Every line here
-> comes from a specific comment or page, and every rank explains itself.
+## 0:41 – 1:00 · The headline and the score
 
----
-
-## 0:35 – 1:05 · The headline decision
-
-**On screen:** zoom on the headline quote, then open signal 01 "Decision by Marco
-Silva (14 Sept)" → "Why it ranks here": *shares 6 specific terms · recorded
-decision · authority 100% · 2 months ago*.
-
+**On screen:** the quoted decision, then the ranked signal with "Why it ranks
+here".
 **Narration:**
+> At the top is the current decision, quoted: move to a sliding window limiter,
+> and check the idempotency key before every attempt. Baton scores its own
+> confidence: seventy-five out of a hundred. Strong. Built from eight ranked
+> signals across three sources.
 
-> The headline is the current decision, quoted: they moved to a sliding window
-> limiter, and the idempotency key is checked before every attempt. Signal one is
-> the comment that said it. Open the reason and you can see why it outranks the
-> rest: it shares specific terms with the issue, it *is* a decision, and it is two
-> months old. A status change from yesterday does not beat it.
+## 1:00 – 1:18 · Why each signal ranks
 
----
-
-## 1:05 – 1:45 · What is no longer true
-
-**On screen:** scroll to Risks. High-severity card: **"2 earlier facts were
-superseded by one update"** — expand, show the quoted replacement sentence and the
-two retired facts (Priya's February decision, ADR-14).
-
+**On screen:** signal 01 (decision), signal 02 (postmortem), then the ADR and API
+contract entries.
 **Narration:**
+> Every signal explains why it ranks where it does. This decision shares seven
+> specific terms with the issue, it is a recorded decision, and it is current.
+> The September postmortem ranks next, because it explains why the old fixed
+> window was retired.
 
-> This is the part that costs teams days. In February the plan was a fixed window.
-> In September that was replaced. Baton detects the replacement language — *instead
-> of* — and checks what the sentence actually negates, so it retires the fixed
-> window decision and the ADR that depended on it, and it does *not* retire the
-> API contract that merely mentions idempotency. One update, two retired facts,
-> one risk, with the receipt.
+## 1:18 – 1:35 · Superseded, gaps, coverage
 
----
-
-## 1:45 – 2:10 · Gaps, and the honest number
-
-**On screen:** scroll through stale / drift / single-source cards, then the
-coverage buckets and Next actions.
-
+**On screen:** the amber "3 earlier facts were superseded" card, the gap list,
+the coverage panel and the next actions.
 **Narration:**
+> Baton also marks what is no longer true, quotes the statement that retired it,
+> and names the gaps. The confidence number is not a black box. It comes from
+> coverage, and the coverage is listed: decision, spec, history, people, recency.
 
-> Below that: a decision last confirmed nine months ago, a handoff whose context
-> has drifted, and one piece of reasoning that lives with a single person. The
-> confidence score is built from five coverage buckets minus those penalties — so
-> 68 means *workable, not clean*, and the reasons are printed rather than hidden
-> behind a percentage.
+## 1:36 – 1:52 · The honest thin brief
 
----
-
-## 2:10 – 2:35 · The opposite case
-
-**On screen:** switch to PAY-457. Confidence **48 / THIN**, first risk
-"missing-decision", coverage shows decision missing, next action "write a two-line
-decision note".
-
+**On screen:** cut to PAY-5; the panel shows confidence 8 / thin, `NO DECISION`,
+red coverage, and "write the decision down".
 **Narration:**
+> Open a thin ticket and the brief is honest. PAY-5 has one comment and no
+> recorded decision. Confidence drops to eight, the label is thin, and the first
+> suggested action is to write the decision down.
 
-> Here is an issue where nobody wrote the decision down. Baton does not invent one.
-> Confidence drops to 48, the label is thin, and the top risk is the missing
-> decision itself, with an action attached. A brief that says "I don't know" is
-> more useful than a confident summary that guesses.
+## 1:52 – 2:07 · End card
 
----
-
-## 2:35 – 3:05 · From one issue to the team
-
-**On screen:** issue `•••` menu → **Baton - hand off with context** → result card →
-*Post brief as comment* (show the ADF comment in the issue) → *Record handoff*.
-Then Jira top nav → **Baton handoff health**: 6 handoffs, avg 69%, 1 below 60%,
-3 with a high-severity gap, weekly bars, needs-attention list.
-
+**On screen:** Baton / Handoff briefs for Jira / Codegeist 2026 · Built on
+Atlassian Forge.
 **Narration:**
-
-> One click posts the brief as a structured comment and records the handoff in
-> Forge storage. That history rolls up into a team page: average confidence, how
-> many handoffs went out below sixty, the weekly trend, and the weakest recent
-> handoffs first. Handoff quality stops being a feeling and becomes a number you
-> can watch.
+> Baton. The reasoning behind the work, in front of the next person, at the
+> moment of handoff. Built on Forge, for Codegeist twenty twenty-six.
 
 ---
 
-## 3:05 – 3:20 · Rovo and MCP
+## Reproducing the recording
 
-**On screen:** Rovo chat: *"What do I need to know before I take over PAY-412?"*
-→ the agent answers with the same facts. Quick cut to the MCP tool list showing
-`baton-handoff-brief` and `baton-handoff-health`.
-
-**Narration:**
-
-> The same engine is a Rovo agent and two MCP tools, so an agent — Atlassian's or a
-> third party's — can ask the same question and get the same answer. One brief,
-> four surfaces.
-
----
-
-## 3:20 – 3:30 · Close
-
-**On screen:** back to the panel, slow scroll to the coverage row. Baton logo, repo
-URL, "Runs on Atlassian — no egress".
-
-**Narration:**
-
-> Baton. The right context, in front of the next owner, at the moment work changes
-> hands — and a record of how good that context actually was.
-
----
-
-## Production notes
-
-- **Do not** show the preview harness (`?preview=1`) as if it were Jira; record the
-  panel inside a real Jira issue. The preview is only for b-roll if the deployed
-  app misbehaves.
-- Create the supersession story live if possible: comment "We decided fixed window
-  because the PSP guarantees 24h", then later "We moved to a sliding window
-  limiter instead of the fixed window". Reload → contradiction appears.
-- Record at 30 fps, export H.264 1080p, upload **public** to YouTube, title
-  "Baton — handoff briefs for Jira (Codegeist 2026)".
-- Total narration is ~480 words; if it runs long, cut the MCP beat (3:05–3:20)
-  first — it is also covered in text.
-- Keep the mouse still while talking; scroll with the keyboard (PgDn) so motion is
-  smooth.
+1. Install the app on a Jira site (see `SUBMISSION.md`).
+2. Create a project with two issues of the same shape as PAY-1 and PAY-5, or use
+   the preview harness (`npm run dev`, `?preview=1&issue=PAY-412`) for the
+   fixtures.
+3. Add the **Baton handoff brief** panel to the issue view once per issue
+   (*Apps* menu → *Baton handoff brief*).
+4. Record the panel and the issue activity; the app itself needs no other setup.
