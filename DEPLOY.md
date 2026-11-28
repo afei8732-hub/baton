@@ -47,9 +47,14 @@ npx forge register       # rewrites app.id in manifest.yml, creates the app
 Commit the new `manifest.yml` afterwards. Nothing else in the repo depends on the
 id.
 
-## 3. Deploy
+## 3. Build the Custom UI, then deploy
+
+The built UI (`static/baton`) is generated output and is not committed. Build it
+first, or Forge has nothing to serve in the panel:
 
 ```bash
+npm install
+npm run build            # server -> build/, UI -> static/baton/
 npx forge deploy         # environment: development
 ```
 
