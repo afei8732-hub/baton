@@ -74,7 +74,7 @@ function getBridge(): Promise<Bridge> {
 
 async function run<T>(payload: Record<string, unknown>): Promise<T> {
   const { invoke } = await getBridge();
-  const response = (await invoke('baton', payload)) as { ok?: boolean; error?: string } & T;
+  const response = (await invoke('resolver', payload)) as { ok?: boolean; error?: string } & T;
   if (response && response.ok === false) {
     throw new Error(response.error ?? 'Baton could not build this brief.');
   }

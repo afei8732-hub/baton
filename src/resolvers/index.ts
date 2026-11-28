@@ -37,7 +37,15 @@ interface Unpacked {
  * payload holds the action inputs. Accept both shapes rather than guessing.
  */
 function unpack(event: unknown, context?: unknown): Unpacked {
-  const first = (event ?? {}) as InvokeEvent;
+  const first = (event ?? {}) as InvokeEvent & { call?: { payload?: Record<string, unknown> } };
+  if (typeof first === 'object' && first.call && typeof first.call === 'object') {
+    return {
+      payload: (first.call.payload as Record<string, unknown>) ?? {},
+      context: ((first.context as Record<string, unknown>) ??
+        (context as Record<string, unknown>) ??
+        {}) as Record<string, unknown>,
+    };
+  }
   const looksWrapped =
     typeof first === 'object' && (first.payload !== undefined || first.context !== undefined);
   if (looksWrapped) {
