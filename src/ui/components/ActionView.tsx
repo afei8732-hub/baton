@@ -78,11 +78,11 @@ export function ActionView({ issueKey, brief, posting, posted, error, onRun, onP
 
           {topRisk && (
             <div className="action-risk">
-              <span className={`risk-badge risk-${topRisk.severity === 'high' ? 'bad' : 'warn'}`}>
+              <span className={`hazard-badge hazard-${topRisk.severity === 'high' ? 'bad' : 'warn'}`}>
                 {topRisk.severity} risk
               </span>
-              <p className="risk-title">{topRisk.title}</p>
-              <p className="risk-detail">{topRisk.detail}</p>
+              <p className="hazard-title">{topRisk.title}</p>
+              <p className="hazard-detail">{topRisk.detail}</p>
             </div>
           )}
 

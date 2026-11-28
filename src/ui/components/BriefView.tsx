@@ -138,14 +138,14 @@ export function BriefView({
             {brief.risks.length === 0 && <p className="empty">Nothing contradictory or stale in this context.</p>}
             <ul className="risks">
               {brief.risks.map((risk) => (
-                <li key={risk.id} className={`risk risk-${riskTone(risk.severity)}`}>
-                  <div className="risk-top">
-                    <span className={`risk-badge risk-${riskTone(risk.severity)}`}>
+                <li key={risk.id} className={`hazard hazard-${riskTone(risk.severity)}`}>
+                  <div className="hazard-top">
+                    <span className={`hazard-badge hazard-${riskTone(risk.severity)}`}>
                       {RISK_LABEL[risk.type]} · {risk.severity}
                     </span>
                   </div>
-                  <p className="risk-title">{risk.title}</p>
-                  <p className="risk-detail">{risk.detail}</p>
+                  <p className="hazard-title">{risk.title}</p>
+                  <p className="hazard-detail">{risk.detail}</p>
                 </li>
               ))}
             </ul>

@@ -34,7 +34,7 @@ SHOTS = [
         "name": "02-thin-brief.png",
         "query": "preview=1&view=panel&issue=PAY-457",
         "viewport": (440, 1000),
-        "wait": ".risk-title",
+        "wait": ".hazard-title",
         "full_page": True,
     },
     {

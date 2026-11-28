@@ -4,3 +4,9 @@ build/
 *.log
 .DS_Store
 renders/
+
+# build output (create with npm run build)
+static/baton/
+
+# local research extracts (see RULES_NOTES.md)
+research/docs/

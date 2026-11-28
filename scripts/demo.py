@@ -47,13 +47,13 @@ SCENES = [
     },
     {
         "query": "preview=1&view=panel&issue=PAY-412",
-        "wait": ".risk-title",
+        "wait": ".hazard-title",
         "seconds": 4,
         "scroll": (620, 1320),
     },
     {
         "query": "preview=1&view=panel&issue=PAY-457",
-        "wait": ".risk-title",
+        "wait": ".hazard-title",
         "seconds": 3,
         "scroll": (0, 260),
     },

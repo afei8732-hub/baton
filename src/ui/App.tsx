@@ -101,12 +101,12 @@ export function App() {
       <main className="content">
         {phase === 'loading' && (
           <div className="skeleton" aria-busy="true">
-            <div className="sk sk-hero" />
-            <div className="sk sk-line" />
-            <div className="sk sk-line short" />
-            <div className="sk-grid">
-              <div className="sk sk-block" />
-              <div className="sk sk-block" />
+            <div className="skeleton skeleton-hero" />
+            <div className="skeleton skeleton-line" />
+            <div className="skeleton skeleton-line short" />
+            <div className="skeleton-grid">
+              <div className="skeleton skeleton-block" />
+              <div className="skeleton skeleton-block" />
             </div>
             <p className="skeleton-note">
               {isHealth ? 'Reading recorded handoffs…' : 'Reading issue, comments, history and linked pages…'}
